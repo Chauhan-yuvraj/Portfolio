@@ -9,7 +9,7 @@ export default function Home() {
       <div className="flex justify-between">
         <SideBar />
       </div>
-      <div className="border ">
+      <div className="">
         <CenterContent />
       </div>
       <div className="border">

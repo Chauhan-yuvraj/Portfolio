@@ -1,8 +1,12 @@
-import React from 'react'
+import IntroSection from "./components/IntroSection"
 
 const CenterContent = () => {
   return (
-    <div>CenterContent</div>
+    <div>
+      <div className="w-full">
+        <IntroSection />
+      </div>
+    </div>
   )
 }
 

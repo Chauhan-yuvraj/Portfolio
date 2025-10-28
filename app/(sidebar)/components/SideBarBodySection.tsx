@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 
 const SideBarBodySection = () => {
     const sections = [
@@ -10,6 +11,8 @@ const SideBarBodySection = () => {
         "Contact",
     ];
 
+    const [selected, setSelected] = useState("Introduction");
+
     return (
         <div className="grid grid-cols-[1fr_3.9fr_1fr] w-full h-full">
             <div className="border-r" />
@@ -17,7 +20,11 @@ const SideBarBodySection = () => {
                 {sections.map((item) => (
                     <div
                         key={item}
-                        className="border-y py-2 border-edge w-full text-center cursor-pointer hover:bg-accent"
+                        onClick={() => setSelected(item)}
+                        className={`border-y py-2 border-edge w-full text-center cursor-pointer transition-colors ${selected === item
+                            ? "bg-selection text-selection-foreground font-semibold"
+                            : "hover:bg-accent"
+                            }`}
                     >
                         {item}
                     </div>
