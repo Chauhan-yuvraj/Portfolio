@@ -5,10 +5,11 @@ import { SimpleTooltip } from "@/components/ui/tooltip"
 import { VerifiedIcon } from "@/components/verified-icon"
 import { USER } from "@/features/profile/data/user"
 import { Overview } from "./overview"
+import { About } from "./about"
 
 const IntroSection = () => {
     return (
-        <div className='w-full py-8.5'>
+        <div className='w-full py-8.5 h-screen'>
             <div className="empty -z-20 h-40 border-y overflow-hidden w-screen -mx-[calc((100vw-100%)/2)]" />
             <div className="name">
                 <h1 className="flex items-center pl-4 text-3xl font-semibold">
@@ -36,12 +37,17 @@ const IntroSection = () => {
             <div className="separater overflow-hidden">
                 <Separator />
             </div>
-            <div className="overview">
+            <div className="overview overflow-hidden ">
                 <Overview />
             </div>
-            <div className="separater"></div>
-            <div className="about"></div>
-            <div className="aboutDec"></div>
+            <div className="separater overflow-hidden">
+                <Separator />
+            </div>
+            <div className="about overflow-hidden">
+                <About />
+            </div>
+            <div className="">
+            </div>
 
         </div>
     )

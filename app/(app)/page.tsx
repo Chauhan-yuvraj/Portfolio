@@ -12,7 +12,7 @@ export default function Home() {
       <div className="">
         <CenterContent />
       </div>
-      <div className="border">
+      <div className="">
         <ChatSection />
       </div>
     </div>

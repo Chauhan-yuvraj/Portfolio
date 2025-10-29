@@ -6,7 +6,7 @@ import SideBarBodySection from './components/SideBarBodySection'
 const SideBar = () => {
     return (
         <div className="grid grid-cols-[1fr_auto] overflow-hidden h-screen w-full">
-            <div className='border-edge grid grid-rows-[1fr_3fr]'>
+            <div className='border-edge grid grid-rows-[1fr_3fr] h-screen overflow-hidden'>
                 <div className="">
                     <div className="border-r border-b border-edge">
                         <SidebarImageSection />
@@ -24,9 +24,8 @@ const SideBar = () => {
                 <div className="border-t border-edge">
                     <SideBarBodySection />
                 </div>
-                <div className="sidebar-Content"></div>
             </div>
-            <div className="w-8">
+            <div className="w-8 h-screen overflow-y-hidden ">
                 <Separator rotation="rotate-90" />
             </div>
         </div>

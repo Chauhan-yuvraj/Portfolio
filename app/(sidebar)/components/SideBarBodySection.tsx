@@ -16,7 +16,7 @@ const SideBarBodySection = () => {
     return (
         <div className="grid grid-cols-[1fr_3.9fr_1fr] w-full h-full">
             <div className="border-r" />
-            <div className="border-r flex flex-col gap-4 pt-16">
+            <div className="border-r flex flex-col gap-4 pt-16 ">
                 {sections.map((item) => (
                     <div
                         key={item}
