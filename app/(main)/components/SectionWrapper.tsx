@@ -5,8 +5,9 @@ import { useState } from 'react';
 import { Sidebar } from '@/components/SideBar';
 import HeaderSection from './headerSection';
 import IntroSectionContent from './IntroSection';
+import BioSectionWrapper from './bio/BioSectionWrapper';
 
-export function IntroSectionWrapper() {
+export function SectionWrapper() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,14 +16,15 @@ export function IntroSectionWrapper() {
 
   return (
     <div className='w-full h-screen '>
-      {/* The Sidebar component (Client side) */}
       <Sidebar isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
 
-      {/* HeaderSection (Client side) */}
       <HeaderSection isOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
-      {/* Rest of the content (Server side) */}
-      <IntroSectionContent />
+      <div className="h-full  no-scrollbar overflow-scroll">
+
+        <IntroSectionContent />
+        <BioSectionWrapper />
+      </div>
     </div>
   );
 }
