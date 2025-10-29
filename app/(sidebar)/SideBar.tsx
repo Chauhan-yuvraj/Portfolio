@@ -1,5 +1,5 @@
+
 import Separator from '@/components/Separator'
-import React from 'react'
 import SidebarImageSection from './components/SidebarImageSection'
 import SideBarBodySection from './components/SideBarBodySection'
 

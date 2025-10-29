@@ -1,10 +1,13 @@
-import IntroSection from "./components/IntroSection"
+// CenterContent.tsx
+
+import { IntroSectionWrapper } from "./components/IntroSectionWrapper" // Import the client wrapper
 
 const CenterContent = () => {
   return (
     <div>
       <div className="w-full">
-        <IntroSection />
+        {/* Use the wrapper here */}
+        <IntroSectionWrapper />
       </div>
     </div>
   )

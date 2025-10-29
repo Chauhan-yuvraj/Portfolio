@@ -1,39 +1,52 @@
+"use client"; // REQUIRED for useState and useEffect
+
 import { FlipSentences } from "@/components/flip-sentence"
-import { PronounceMyName } from "@/components/say-my-name"
 import Separator from "@/components/Separator"
-import { SimpleTooltip } from "@/components/ui/tooltip"
-import { VerifiedIcon } from "@/components/verified-icon"
 import { USER } from "@/features/profile/data/user"
 import { Overview } from "./overview"
 import { About } from "./about"
+import HeaderBox from "./HeaderBox"
+import NameImage from "./NameImage"
+import { cn } from "@/lib/utils"; // Assuming you have cn utility
+import { useEffect, useRef, useState } from "react";
 
-const IntroSection = () => {
+
+const IntroSectionContent = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const handleScroll = () => {
+        if (containerRef.current) {
+            setIsScrolled(containerRef.current.scrollTop > 0);
+        }
+    };
+
+    useEffect(() => {
+        const container = containerRef.current;
+        if (container) {
+            container.addEventListener('scroll', handleScroll);
+        }
+        return () => {
+            if (container) {
+                container.removeEventListener('scroll', handleScroll);
+            }
+        };
+    }, []);
+
     return (
-        <div className='w-full py-8.5 h-screen'>
-            <div className="empty -z-20 h-40 border-y overflow-hidden w-screen -mx-[calc((100vw-100%)/2)]" />
-            <div className="name">
-                <h1 className="flex items-center pl-4 text-3xl font-semibold">
-                    {USER.displayName}
-                    &nbsp;
-                    <SimpleTooltip content="Verified">
-                        <VerifiedIcon className="size-[0.6em] translate-y-px text-info select-none" />
-                    </SimpleTooltip>
-                    {USER.namePronunciationUrl && (
-                        <>
-                            &nbsp;
-                            <PronounceMyName
-                                className="translate-y-px"
-                                namePronunciationUrl={USER.namePronunciationUrl}
-                            />
-                        </>
-                    )}
-                </h1>
+        <div ref={containerRef} className={`w-full h-screen no-scrollbar ${isScrolled ? 'overflow-y-auto' : 'overflow-y-auto'}`}>
+            <div className="pointer-events-none fixed inset-0 w-full px-3">
+                <div className="w-full h-full border-x"></div>
             </div>
-            <div className="aniamted">
-                <div className="h-12 border-y border-edge py-1 pl-4 sm:h-auto">
-                    <FlipSentences sentences={USER.flipSentences} />
-                </div>
+
+            <HeaderBox />
+
+            <NameImage />
+
+            <div className="h-12 flex border-y border-edge items-center px-4 ">
+                <FlipSentences sentences={USER.flipSentences} />
             </div>
+
             <div className="separater overflow-hidden">
                 <Separator />
             </div>
@@ -53,4 +66,4 @@ const IntroSection = () => {
     )
 }
 
-export default IntroSection
+export default IntroSectionContent 
