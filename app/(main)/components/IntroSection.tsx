@@ -34,6 +34,9 @@ const IntroSectionContent = () => {
             <div className="about overflow-hidden">
                 <About />
             </div>
+            <div className="separater overflow-hidden">
+                <Separator />
+            </div>
             <div className="">
             </div>
 

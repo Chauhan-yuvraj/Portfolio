@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Sidebar } from '@/components/SideBar';
 import HeaderSection from './headerSection';
 import IntroSectionContent from './IntroSection';
-import BioSectionWrapper from './bio/BioSectionWrapper';
+import BioSectionWrapper from './bio/index';
 
 export function SectionWrapper() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

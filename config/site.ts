@@ -28,7 +28,7 @@ export const MAIN_NAV: NavItem[] = [
         href: "/components",
     },
 ];
-
+export const GITHUB_USERNAME = "Chauhan-yuvraj";
 export const SOURCE_CODE_GITHUB_REPO = "#";
 export const SOURCE_CODE_GITHUB_URL = "#";
 

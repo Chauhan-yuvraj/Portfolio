@@ -5,7 +5,6 @@
 
 @custom-variant dark (&:where(.dark , .dark *));
 
-
 @theme inline {
   /* Base app background (body, surfaces) */
   --color-background: var(--background);
@@ -118,6 +117,19 @@
 
 @utility link {
   @apply font-medium underline underline-offset-4;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 2. THIS IS THE FIX: Use @utility to create the class */
+@utility animate-scroll {
+  animation: scroll 10s linear infinite;
 }
 
 @utility screen-line-before {
