@@ -15,7 +15,7 @@ const ScrollContext = createContext<ScrollContextType | null>(null);
 
 // Create a Provider component
 export const ScrollProvider = ({ children }: { children: ReactNode }) => {
-    const refs = {
+    const refs: Record<SectionId, React.RefObject<HTMLDivElement | null>> = {
         introduction: useRef<HTMLDivElement>(null),
         bio: useRef<HTMLDivElement>(null),
         products: useRef<HTMLDivElement>(null),
