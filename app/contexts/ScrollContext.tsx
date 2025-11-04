@@ -6,7 +6,7 @@ import React, { createContext, useRef, useContext, ReactNode } from 'react';
 export type SectionId = 'introduction' | 'bio' | 'products' | 'experience' | 'certification' | 'contact';
 
 interface ScrollContextType {
-    refs: Record<SectionId, React.RefObject<HTMLDivElement>>;
+    refs: Record<SectionId, React.RefObject<HTMLDivElement | null>>;
     scrollToSection: (sectionId: SectionId) => void;
 }
 
