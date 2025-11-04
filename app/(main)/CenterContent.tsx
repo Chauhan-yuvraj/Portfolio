@@ -5,7 +5,7 @@ import { SectionWrapper } from "./components/SectionWrapper" // Import the clien
 const CenterContent = () => {
   return (
     <div>
-      <div className="w-full">
+      <div className="">
         <SectionWrapper />
       </div>
     </div>

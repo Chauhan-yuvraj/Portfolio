@@ -9,12 +9,19 @@ import NameImage from "./NameImage"
 
 const IntroSectionContent = () => {
     return (
-        <div className={`w-full`}>
-            <div className="pointer-events-none fixed inset-0 w-full px-3">
-                <div className="w-full h-full border-x"></div>
+        <div className={`w-full `}>
+            <div className="pointer-events-none fixed inset-0 z-20 flex justify-between">
+                {/* Left border */}
+                <div className="w-[.8rem] h-full border-r bg-background"></div>
+
+                {/* Right border */}
+                <div className="w-[0.8rem] h-full border-l bg-background"></div>
             </div>
 
-            <HeaderBox />
+            <div className="overflow-hidden">
+
+                <HeaderBox />
+            </div>
 
             <NameImage />
 

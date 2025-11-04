@@ -1,3 +1,5 @@
+// TechStack.tsx
+
 import { cn } from "@/lib/utils";
 import { Panel, PanelContent, PanelHeader, PanelTitle } from "@/components/panel";
 import { TECH_STACK_GROUPS } from "@/features/profile/data/tech-stack";
@@ -17,12 +19,19 @@ export function TechStack() {
           "bg-zinc-950/0.75 dark:bg-white/0.75"
         )}
       >
+        {/* The parent flex container is correct */}
         <ul className="flex flex-wrap gap-4 select-none">
-          <Stack techStack={TECH_STACK_GROUPS.frontend} techStackName="Fronted Development" />
+          <li className="flex-1 min-w-[320px]">
+            <Stack techStack={TECH_STACK_GROUPS.frontend} techStackName="Frontend Development" />
+          </li>
 
-          <Stack techStack={TECH_STACK_GROUPS.backend} techStackName="Backed Development" />
+          <li className="flex-1 min-w-[320px]">
+            <Stack techStack={TECH_STACK_GROUPS.tools} techStackName="Tools & Others" />
+          </li>
+          <li className="flex-1 min-w-[320px]">
+            <Stack techStack={TECH_STACK_GROUPS.backend} techStackName="Backend Development" />
+          </li>
 
-          <Stack techStack={TECH_STACK_GROUPS.tools} techStackName=" Tools & Others" />
         </ul>
       </PanelContent>
     </Panel>

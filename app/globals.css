@@ -118,19 +118,19 @@
 @utility link {
   @apply font-medium underline underline-offset-4;
 }
-@keyframes scroll {
+/* @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 /* 2. THIS IS THE FIX: Use @utility to create the class */
-@utility animate-scroll {
-  animation: scroll 10s linear infinite;
-}
+/* @utility animate-scroll {
+  animation: scroll 3s linear infinite;
+} */
 
 @utility screen-line-before {
   @apply relative before:absolute before:top-0 before:-left-[100vw] before:z-1 before:h-px before:w-[200vw] before:bg-edge;
