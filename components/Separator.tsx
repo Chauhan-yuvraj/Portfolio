@@ -4,6 +4,7 @@ import React from 'react'
 interface SeparatorProps {
     rotation?: string
     className?: string
+    
 }
 
 const Separator = ({ rotation = 'rotate-0', className }: SeparatorProps) => { // Added rotation prop for flexibility
