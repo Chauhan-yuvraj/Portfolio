@@ -14,7 +14,6 @@ import { cn } from "@/lib/utils";
 
 import { ExperienceIcon } from "./experience-position-icon";
 import { ExperiencePosition } from "@/features/profile/types/experiences";
-import Separator from "@/components/Separator";
 
 export function ExperiencePositionItem({
   position,
@@ -93,7 +92,7 @@ export function ExperiencePositionItem({
           </div>
         </CollapsibleTrigger>
 
-        <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-fade-up data-[state=open]:animate-collapsible-fade-down">
+        <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down duration-300">
           {position.description && (
             <Prose className="pt-2 pl-9">
               <Markdown>{position.description}</Markdown>

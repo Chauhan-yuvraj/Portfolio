@@ -1,3 +1,5 @@
+// app/contexts/ScrollContext.tsx
+
 'use client';
 
 import React, { createContext, useRef, useContext, ReactNode } from 'react';
@@ -6,7 +8,9 @@ import React, { createContext, useRef, useContext, ReactNode } from 'react';
 export type SectionId = 'introduction' | 'bio' | 'products' | 'experience' | 'certification' | 'contact';
 
 interface ScrollContextType {
+    // FIX: Allow the refs to be null initially
     refs: Record<SectionId, React.RefObject<HTMLDivElement | null>>;
+    scrollContainerRef: React.RefObject<HTMLDivElement | null>;
     scrollToSection: (sectionId: SectionId) => void;
 }
 
@@ -15,26 +19,35 @@ const ScrollContext = createContext<ScrollContextType | null>(null);
 
 // Create a Provider component
 export const ScrollProvider = ({ children }: { children: ReactNode }) => {
+    // This ref's type is `RefObject<HTMLDivElement | null>`
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    // FIX: The type annotation here should also allow for null
     const refs: Record<SectionId, React.RefObject<HTMLDivElement | null>> = {
         introduction: useRef<HTMLDivElement>(null),
         bio: useRef<HTMLDivElement>(null),
         products: useRef<HTMLDivElement>(null),
         experience: useRef<HTMLDivElement>(null),
-        // Add placeholders for future sections
         certification: useRef<HTMLDivElement>(null),
         contact: useRef<HTMLDivElement>(null),
     };
 
     const scrollToSection = (sectionId: SectionId) => {
-        const ref = refs[sectionId];
-        ref.current?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
+        const container = scrollContainerRef.current;
+        const section = refs[sectionId].current;
+
+        // This `if` check is what makes the logic safe, and now our types reflect this
+        if (container && section) {
+            const topPosition = section.offsetTop;
+            container.scrollTo({
+                top: topPosition,
+                behavior: 'smooth',
+            });
+        }
     };
 
     return (
-        <ScrollContext.Provider value={{ refs, scrollToSection }}>
+        <ScrollContext.Provider value={{ refs, scrollContainerRef, scrollToSection }}>
             {children}
         </ScrollContext.Provider>
     );

@@ -1,64 +1,73 @@
+/* eslint-disable react-hooks/refs */
 "use client";
 
 import { useState } from 'react';
-import { Sidebar } from '@/components/SideBar';
+import { Sidebar } from '@/components/SideBar'; // Assuming path
 import HeaderSection from './headerSection';
 import IntroSectionContent from './IntroSection';
 import BioSectionWrapper from './bio/index';
 import { Projects } from './projects';
-import Separator from '@/components/Separator';
+import Separator from '@/components/Separator'; // Assuming path
 import { Experiences } from './experiences';
 import { useScroll } from '@/app/contexts/ScrollContext';
 
+// Renaming to CenterContent to match the component in Home, or assuming SectionWrapper is correct.
 export function SectionWrapper() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { refs } = useScroll();
+  // Get both refs and the new scrollContainerRef from the context
+  const { refs, scrollContainerRef } = useScroll();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className='w-full h-screen '>
+    <div className='w-full h-screen'>
       <Sidebar isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       <HeaderSection isOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
-      <div className="h-full  no-scrollbar overflow-y-scroll">
-        
-        {/* eslint-disable-next-line react-hooks/refs */}
+      {/* Attach the scrollContainerRef to the scrollable div */}
+      <div
+        ref={scrollContainerRef}
+        className="h-full no-scrollbar overflow-y-scroll"
+      >
         <div ref={refs.introduction}>
           <IntroSectionContent />
         </div>
 
-        {/* eslint-disable-next-line react-hooks/refs */}
         <div ref={refs.bio}>
           <BioSectionWrapper />
         </div>
 
-        {/* eslint-disable-next-line react-hooks/refs */}
         <div ref={refs.products}>
           <Projects />
           <Separator />
         </div>
 
-        {/* eslint-disable-next-line react-hooks/refs */}
         <div ref={refs.experience}>
           <Experiences />
           <Separator />
         </div>
-        
-        {/* eslint-disable-next-line react-hooks/refs */}
+
         <div ref={refs.certification}>
-          {/* Your Certification components would go here */}
+            {/* Add certification content here */}
         </div>
 
-        {/* eslint-disable-next-line react-hooks/refs */}
         <div ref={refs.contact}>
-          {/* Your Contact components would go here */}
           <Separator />
+            {/* Add contact content here */}
           <Separator />
         </div>
       </div>
     </div>
   );
 }
+
+// NOTE: Ensure that your `CenterContent` component is rendering this `SectionWrapper` component.
+// For example:
+//
+// import { SectionWrapper } from './path/to/SectionWrapper';
+//
+// export default function CenterContent() {
+//   return <SectionWrapper />;
+// }
