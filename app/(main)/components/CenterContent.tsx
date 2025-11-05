@@ -12,7 +12,7 @@ import { Experiences } from './experiences';
 import { useScroll } from '@/app/contexts/ScrollContext';
 
 // Renaming to CenterContent to match the component in Home, or assuming SectionWrapper is correct.
-export function SectionWrapper() {
+export function CenterContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Get both refs and the new scrollContainerRef from the context
   const { refs, scrollContainerRef } = useScroll();

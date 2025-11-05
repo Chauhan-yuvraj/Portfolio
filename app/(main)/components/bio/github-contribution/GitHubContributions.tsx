@@ -12,9 +12,12 @@ export function GitHubContributions() {
     <Panel>
       <h2 className="sr-only">GitHub Contributions</h2>
 
+<div className="overflow-x-auto">
+
       <Suspense fallback={<GitHubContributionFallback />}>
         <GitHubContributionGraph contributions={contributions} />
       </Suspense>
+</div>
     </Panel>
   );
 }

@@ -16,7 +16,6 @@ const BioSectionWrapper = () => {
                 <Separator />
             </div>
             <div className="overflow-hidden">
-
                 <SocialLinks />
             </div>
 

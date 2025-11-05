@@ -35,31 +35,33 @@ export function GitHubContributionGraph({
       blockMargin={3}
       blockRadius={0}
     >
-      <ContributionGraphCalendar
-        className="no-scrollbar px-2"
-        title="GitHub Contributions"
-      >
-        {({ activity, dayIndex, weekIndex }) => (
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <g>
-                <ContributionGraphBlock
-                  activity={activity}
-                  dayIndex={dayIndex}
-                  weekIndex={weekIndex}
-                />
-              </g>
-            </TooltipTrigger>
+      <div className="overflow-x-auto">
+        <ContributionGraphCalendar
+          className="no-scrollbar px-2"
+          title="GitHub Contributions"
+        >
+          {({ activity, dayIndex, weekIndex }) => (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <g>
+                  <ContributionGraphBlock
+                    activity={activity}
+                    dayIndex={dayIndex}
+                    weekIndex={weekIndex}
+                  />
+                </g>
+              </TooltipTrigger>
 
-            <TooltipContent className="font-sans" sideOffset={0}>
-              <p>
-                {activity.count} contribution{activity.count > 1 ? "s" : null}{" "}
-                on {dayjs(activity.date).format("DD.MM.YYYY")}
-              </p>
-            </TooltipContent>
-          </Tooltip>
-        )}
-      </ContributionGraphCalendar>
+              <TooltipContent className="font-sans" sideOffset={0}>
+                <p>
+                  {activity.count} contribution{activity.count > 1 ? "s" : null}{" "}
+                  on {dayjs(activity.date).format("DD.MM.YYYY")}
+                </p>
+              </TooltipContent>
+            </Tooltip>
+          )}
+        </ContributionGraphCalendar>
+      </div>
 
       <ContributionGraphFooter className="px-2">
         <ContributionGraphTotalCount>

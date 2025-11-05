@@ -1,5 +1,5 @@
 import ChatSection from "../(chat)/ChatSection";
-import CenterContent from "../(main)/CenterContent";
+import { CenterContent } from "../(main)/components/CenterContent";
 import SideBar from "../(sidebar)/SideBar";
 import { ScrollProvider } from "../contexts/ScrollContext"; // Import the provider
 
@@ -11,7 +11,7 @@ export default function Home() {
         <div className="lg:flex hidden justify-between">
           <SideBar />
         </div>
-        <div className="">
+        <div className="min-w-0">
           <CenterContent />
         </div>
         <div className="lg:flex hidden justify-between borde-x h-full">
