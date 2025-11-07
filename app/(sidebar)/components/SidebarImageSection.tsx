@@ -9,7 +9,7 @@ const SidebarImageSection = () => {
             <div className=""></div>
             <div className="border-x flex justify-center relative">
                 <img src="/india.svg" alt="" className='absolute left-0' />
-                <img src="/pic.jpg" alt="yuvraj" className='rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40' />
+                <img src="/pic.jpg" alt="yuvraj" className='rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none object-contain h-full sm:size-40' />
             </div>
             <div className=""></div>
             <div className=""></div>

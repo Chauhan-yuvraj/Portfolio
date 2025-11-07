@@ -12,7 +12,7 @@ type StackProps = {
 };
 
 const Stack: React.FC<StackProps> = ({ techStack, techStackName }) => {
-    // const techStacks = [...techStack , ...techStack]
+  // const techStacks = [...techStack , ...techStack]
   return (
     <div className="relative w-full bg-background border border-edge rounded-md overflow-hidden py-2">
       <Marquee pauseOnHover speed={40} gradient={false}>
@@ -29,14 +29,15 @@ const Stack: React.FC<StackProps> = ({ techStack, techStackName }) => {
                 {tech.theme ? (
                   <>
                     <Image
-                      src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}-light.svg`}
+                      // src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}-light.svg`}
+                      src={`https://assets-topaz.vercel.app/icons/${tech.key}.svg`}
                       alt={`${tech.title} light icon`}
                       width={32}
                       height={32}
                       className="hidden [html.light_&]:block"
                     />
                     <Image
-                      src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}-dark.svg`}
+                      src={`https://assets-topaz.vercel.app/icons/${tech.key}-dark.svg`}
                       alt={`${tech.title} dark icon`}
                       width={32}
                       height={32}
@@ -45,7 +46,7 @@ const Stack: React.FC<StackProps> = ({ techStack, techStackName }) => {
                   </>
                 ) : (
                   <Image
-                    src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}.svg`}
+                    src={`https://assets-topaz.vercel.app/icons/${tech.key}.svg`}
                     alt={`${tech.title} icon`}
                     width={32}
                     height={32}
