@@ -12,7 +12,6 @@ export const TECH_STACK_GROUPS: Record<string, TechStack[]> = {
     { key: "motion", title: "Motion", href: "https://motion.dev/", categories: ["Library", "Animation"] },
     { key: "react-router", title: "React Router", href: "https://reactrouter.com/", categories: ["Library", "Navigation"], theme: true },
     { key: "react-navigation", title: "React Navigation", href: "https://reactnavigation.org/", categories: ["Library", "Navigation"] },
-    { key: "antd", title: "Ant Design", href: "https://ant.design/", categories: ["Library", "UI Library"] },
   ],
 
   backend: [
