@@ -30,14 +30,14 @@ const Stack: React.FC<StackProps> = ({ techStack, techStackName }) => {
                   <>
                     <Image
                       // src={`https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}-light.svg`}
-                      src={`https://assets-topaz.vercel.app/icons/${tech.key}.svg`}
+                      src={`https://assets-topaz.vercel.app/icons/dark/${tech.key}.svg`}
                       alt={`${tech.title} light icon`}
                       width={32}
                       height={32}
                       className="hidden [html.light_&]:block"
                     />
                     <Image
-                      src={`https://assets-topaz.vercel.app/icons/${tech.key}-dark.svg`}
+                      src={`https://assets-topaz.vercel.app/icons/light/${tech.key}.svg`}
                       alt={`${tech.title} dark icon`}
                       width={32}
                       height={32}
@@ -46,7 +46,7 @@ const Stack: React.FC<StackProps> = ({ techStack, techStackName }) => {
                   </>
                 ) : (
                   <Image
-                    src={`https://assets-topaz.vercel.app/icons/${tech.key}.svg`}
+                    src={`https://assets-topaz.vercel.app/icons/dark/javascript.svg`}
                     alt={`${tech.title} icon`}
                     width={32}
                     height={32}
