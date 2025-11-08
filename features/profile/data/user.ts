@@ -41,7 +41,7 @@ Let's connect and collaborate!
     avatar: "/pic.jpg",
     ogImage:
         "/bio.png",
-    namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
+    namePronunciationUrl: "https://assets-topaz.vercel.app/audio/name.mp3",
     keywords: [
         "Chauhanyuvraj",
         "Chauhan Yuvraj",
@@ -57,5 +57,5 @@ Let's connect and collaborate!
         "c_yuvraj",
     ],
 
-    dateCreated: "2025-10-25", 
+    dateCreated: "2025-10-25",
 };
