@@ -38,9 +38,9 @@ I also created [expo-router-redux-nativewind](https://www.npmjs.com/package/expo
 
 Let's connect and collaborate!
   `,
-    avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
+    avatar: "/pic.jpg",
     ogImage:
-        "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1755355653",
+        "/bio.png",
     namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
     keywords: [
         "Chauhanyuvraj",
