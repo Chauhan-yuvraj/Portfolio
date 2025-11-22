@@ -23,7 +23,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
           alt={title}
           width={48}
           height={48}
-          quality={100}
+          quality={75}
           unoptimized
         />
         <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />

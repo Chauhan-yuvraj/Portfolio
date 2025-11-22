@@ -10,7 +10,7 @@ const SideBarBodySection = () => {
         { name: "Products", id: "products" },
         { name: "Experience", id: "experience" },
         { name: "Certification", id: "certification" },
-        { name: "Contact", id: "contact" },
+        // { name: "Contact", id: "contact" },
     ];
 
     const { scrollToSection } = useScroll(); // Use the hook
