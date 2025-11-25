@@ -29,7 +29,7 @@ export function CenterContent() {
       {/* Attach the scrollContainerRef to the scrollable div */}
       <div
         ref={scrollContainerRef}
-        className="h-full no-scrollbar overflow-y-scroll"
+        className="h-full no-scrollbar overflow-y-scroll overflow-x-hidden"
       >
         <div ref={refs.introduction}>
           <IntroSectionContent />
@@ -46,6 +46,7 @@ export function CenterContent() {
 
         <div ref={refs.experience}>
           <Experiences />
+          
           <Separator />
         </div>
 
