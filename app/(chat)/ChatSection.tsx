@@ -47,7 +47,7 @@ const ChatSection = ({ onClose }: ChatSectionProps) => {
     setIsLoading(true);
 
     try {
-      const { reply, updatedUsername } = await chatService.sendMessage(userMsg.text);
+      const { reply, updatedUsername } = await chatService.sendMessage(userMsg.text , messages);
       if (updatedUsername) {
         setUserName(updatedUsername);
         setUserAvatar(chatService.getAvatarUrl(updatedUsername));
