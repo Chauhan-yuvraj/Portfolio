@@ -12,7 +12,7 @@ export default function Home() {
           <SideBar />
         </div>
         <div className="min-w-0">
-          {/* <CenterContent /> */}
+          <CenterContent />
         </div>
         <div className="lg:flex hidden justify-between borde-x h-full">
           <ChatSection />
