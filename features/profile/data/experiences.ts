@@ -7,7 +7,7 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "ab_fullstack_dev",
-        title: "JavaScript Full Stack Developer",
+        title: "Full Stack Developer",
         employmentPeriod: {
           start: "06.2025",
         },
@@ -30,7 +30,7 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         id: "ab_fullstack_intern",
-        title: "Fronted Developer Intern",
+        title: "Full Stack Developer Intern",
         employmentPeriod: {
           start: "01.2025",
           end: "06.2025",
