@@ -167,7 +167,12 @@ export const EXPERIENCES: Experience[] = [
         },
         icon: "education",
         description: `- Scored 74.76%.`,
-        skills: [],
+        skills: [
+          "Public Speaking",
+          "Critical Thinking",
+          "Time Management",
+          "Team Collaboration",
+        ],
       },
       {
         id: "edu_ssc",
@@ -178,7 +183,13 @@ export const EXPERIENCES: Experience[] = [
         },
         icon: "education",
         description: `- Scored 78.87%.`,
-        skills: [],
+        skills: [
+          "Fundamental Mathematics",
+          "Science Basics",
+          "Effective Communication",
+          "Problem-Solving",
+          
+        ],
       },
     ],
   },

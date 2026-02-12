@@ -2,56 +2,72 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
-    id: "structure-maker",
-    title: "structure-maker",
+    id: "ai-portfolio-agent",
+    title: "AI Portfolio Agent (MCP-Powered)",
     period: {
-      start: ""
-    },
-    link: "https://github.com/Chauhan-yuvraj/structure-maker",
-    skills: [
-      "Personal Project",
-      "Software Architecture",
-      "Code Optimization",
-      "Problem Solving",
-    ],
-    description: `A project focused on resolving complex software issues, which led to a 40% reduction in long-standing unresolved problems in a previous role.`,
-    isExpanded: true,
-  },
-  {
-    id: "expo-router-redux-nativewind",
-    title: "expo-router-redux-nativewind",
-    period: {
-      start: ""
-    },
-    link: "https://github.com/Chauhan-yuvraj/expo-router-redux-nativewind",
-    skills: [
-      "Open Source",
-      "Template",
-      "React Native",
-      "Expo Router",
-      "Redux",
-      "NativeWind",
-      "TypeScript",
-    ],
-    description: `A modern, lightweight template for React Native projects. It is designed to save hours of setup time and supercharge project scaffolding with a clean, production-ready foundation.`,
-  },
-  {
-    id: "aidrms",
-    title: "AIDRMS (Disaster Management System)",
-    period: {
-      start: "06.2025",
+      start: "2025",
     },
     link: "https://github.com/Chauhan-yuvraj",
     skills: [
-      "Company Project",
-      "Full Stack",
-      "React Native",
-      "Expo",
-      "Node.js",
-      "Express.js",
-      "PostgreSQL",
+      "Next.js",
+      "Python",
+      "FastAPI",
+      "MCP (Model Context Protocol)",
+      "Gemini AI",
+      "TypeScript",
     ],
-    description: `Contributed to the Abhyuday Integrated Disaster Response Management System (AIDRMS), a software developed in collaboration with the Indian Army. Developed features for real-time disaster alerts, authority coordination, and hospital/station mapping.`,
+    description: `The very platform you are looking at. A next-gen portfolio featuring an embedded AI agent built using Anthropic's Model Context Protocol (MCP).
+    The architecture connects a Next.js frontend to a Python backend (FastAPI), which spawns an MCP Server. The AI autonomously decides which "tools" to use—whether fetching real-time GitHub stats, reading bio data, or saving user preferences to local storage.`,
+    isExpanded: true,
+  },
+  {
+    id: "high-performance-explorer",
+    title: "High-Performance File Explorer",
+    period: {
+      start: "2024",
+    },
+    link: "https://github.com/Chauhan-yuvraj",
+    skills: [
+      "React",
+      "Wails",
+      "TailwindCSS",
+      "Zustand",
+      "Virtualization",
+      "Performance Optimization",
+    ],
+    description: `Engineered a custom file explorer using list virtualization, achieving 80x faster search and rendering speeds compared to native Windows Explorer by minimizing DOM overhead. Features instant file previews (code, image, video) and lag-free handling of million-file datasets.`,
+  },
+  {
+    id: "drone-management-system",
+    title: "Real-time Drone Management System",
+    period: {
+      start: "2024",
+    },
+    link: "https://github.com/Chauhan-yuvraj",
+    skills: [
+      "Node.js",
+      "Socket.io",
+      "Mapbox",
+      "React",
+      "MongoDB",
+      "Express",
+    ],
+    description: `Engineered a real-time command dashboard utilizing Mapbox and WebSockets to render live flight paths and device telemetry (battery/signal) with zero latency. Designed a responsive interface to manage fleet operations, drone registration, and performance auditing.`,
+  },
+  {
+    id: "structure-maker",
+    title: "structure-maker",
+    period: {
+      start: "2024",
+    },
+    link: "https://github.com/Chauhan-yuvraj/structure-maker",
+    skills: [
+      "Developer Tool",
+      "Software Architecture",
+      "CLI",
+      "Node.js",
+    ],
+    description: `A developer tool focused on resolving complex software scaffolding issues. It led to a 40% reduction in setup time for long-standing unresolved architecture problems in previous roles.`,
   },
   {
     id: "indian-army-visitor-app",
@@ -61,34 +77,7 @@ export const PROJECTS: Project[] = [
       end: "06.2025",
     },
     link: "https://github.com/Chauhan-yuvraj",
-    skills: ["Company Project", "Mobile App", "React Native", "OCR"],
-    description: `Created a mobile application for the Indian Army serving as a Visitor's Book. Integrated OCR technology to convert handwritten text into digital records, improving efficiency and data accuracy.`,
-  },
-  {
-    id: "hack-for-india-2023",
-    title: "Location-based Freelancing Platform",
-    period: {
-      start: "2023",
-    },
-    link: "https://github.com/Chauhan-yuvraj",
-    skills: [
-      "Hackathon",
-      "MERN Stack",
-      "React",
-      "Node.js",
-      "MongoDB",
-      "API Development",
-    ],
-    description: `Built a location-based freelancing platform for the "Hack for India 2023" event using the MERN stack. Optimized MongoDB schema to reduce response times by 25% and implemented a responsive React front-end, boosting user engagement by 20% under tight deadlines.`,
-  },
-  {
-    id: "ssip-2023-chatbot",
-    title: "AI-driven Chatbot for GMSCL",
-    period: {
-      start: "2023",
-    },
-    link: "https://github.com/Chauhan-yuvraj",
-    skills: ["Hackathon", "AI", "Chatbot", "MERN Stack", "React", "Node.js"],
-    description: `Developed an AI-driven chatbot for the "SSIP - 2023" hackathon to streamline access to medical equipment data and meeting bookings. Optimized APIs and MongoDB queries to reduce information retrieval time by 30%, and a React-based interface improved user satisfaction by 25%.`,
+    skills: ["Mobile App", "React Native", "OCR", "Digitalization"],
+    description: `Created a mobile application for the Indian Army serving as a Visitor's Book. Integrated OCR technology to convert handwritten text into digital records, significantly improving data accuracy and retrieval speed.`,
   },
 ];

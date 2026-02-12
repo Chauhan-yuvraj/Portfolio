@@ -22,14 +22,14 @@ export function TechStack() {
         {/* The parent flex container is correct */}
         <ul className="flex flex-wrap gap-4 select-none">
           <li className="flex-1 min-w-[320px]">
-            <Stack techStack={TECH_STACK_GROUPS.frontend} techStackName="Frontend Development" />
+            <Stack techStack={TECH_STACK_GROUPS.backend} techStackName="Backend Development" />
           </li>
 
           <li className="flex-1 min-w-[320px]">
             <Stack techStack={TECH_STACK_GROUPS.tools} techStackName="Tools & Others" />
           </li>
           <li className="flex-1 min-w-[320px]">
-            <Stack techStack={TECH_STACK_GROUPS.backend} techStackName="Backend Development" />
+            <Stack techStack={TECH_STACK_GROUPS.frontend} techStackName="Frontend Development" />
           </li>
 
         </ul>
